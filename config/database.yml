@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: ffseries_development
+
+test:
+  <<: *default
+  database: ffseries_test
+
+production:
+  <<: *default
+  database: ffseries_production
+  # username: ffseries
+  # password: <%= ENV['FFSERIES_DATABASE_PASSWORD'] %>

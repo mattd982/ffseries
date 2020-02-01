@@ -11,19 +11,21 @@
   <body>
     <header class="row">
       <div class="col-3">
-        <br />
-        You know
-        <br />
-        you need
-        <br />
-        to code
+        <%= link_to root_path, class: 'logo' do %>
+          <br />
+          You know
+          <br />
+          you need
+          <br />
+          to code
       </div>
+        <% end %>
      </div>
       <div class="col-4 slogan">
         Splurting out unsolicited advice about entrepreneurship since 2016
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Post', new_review_path %>
         <%= link_to 'About', '#' %>
       </div>
     </header>
@@ -38,7 +40,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-        <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+        <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
       </div>
       <div class="col-6 footer-blurb">
         Proudly hacked by <a href="[YOUR_PORTFOLIO_URL]">[Your name here]</a><br />

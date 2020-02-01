@@ -1,3 +1,4 @@
+
 @import "bootstrap";
 
 .clear {
@@ -42,6 +43,8 @@
   color: black;
   font-size: 25px;
   border-bottom: 1px solid #dfdfdf;
+  font-family: 'Arapey', serif;
+  font-weight: bold;
 }
 
 header {
@@ -50,4 +53,15 @@ header {
 
 hr {
   clear:both;
+}
+
+h1 {
+  font-family: 'Arapey', serif;
+  font-size: 24px;
+}
+
+h2 {
+  font-family: 'nobilemedium_italic', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -15,6 +15,9 @@ class ReviewsController < ApplicationController
     redirect_to root_path
   end
 
+  def overview
+  end
+
   private
 
   def review_params

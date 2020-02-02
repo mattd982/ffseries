@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.create(quote_params)
+    @review = Review.create(review_params)
   if @review.invalid?
     flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
   end

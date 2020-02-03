@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :reviews
   get 'overview', to: 'reviews#overview'
   root "ff#index"
+  resources :donations
 end

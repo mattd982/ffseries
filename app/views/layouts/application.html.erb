@@ -49,7 +49,25 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-        <%= link_to "Final Fantasy", root_path, class: 'next-quote' %>
+        <%= link_to "Donate", root_path, class: 'http://localhost:3030/donations/new' %>
+        <%= form_tag donations_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+            <label class="amount">
+              <span>Amount: $5.00</span>
+            </label>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="A month's subscription"
+                  data-amount="500"
+                  data-locale="auto"></script>
+      <% end %>
       </div>
       <div class="col-6 footer-blurb">
          <a ></a><br />

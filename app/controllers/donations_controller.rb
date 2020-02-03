@@ -5,6 +5,7 @@ end
 def create
   # Amount in cents
   @amount = 500
+  redirect_to overview_path 
 
   customer = Stripe::Customer.create({
     email: params[:stripeEmail],
@@ -20,6 +21,6 @@ def create
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
-  redirect_to new_charge_path
+  redirect_to root_path
 end
 end
